@@ -1,0 +1,50 @@
+/* Basic CSS for the navigation bar */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav {
+    background-color: #e7b426;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+  
+  nav ul {
+    list-style-type: none;
+    /* padding: 0; */
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    font-family: cursive, sans-serif;
+    color: #7871b1;
+    font-weight: bold;
+  }
+  nav h1 {
+    text-decoration: none;
+    font-family: cursive, sans-serif;
+    color: #7871b1;
+    font-weight: bold;
+  }
+  nav button{
+    padding: 10px 20px;
+    background-color: rgb(231, 230, 247);
+    color: #7871b1;
+    font-weight: 900;
+}  
+#conditionInput{
+    padding: 10px 20px;
+    background-color: rgb(231, 230, 247);
+    color: #7871b1;
+    font-weight: 900;
+}
