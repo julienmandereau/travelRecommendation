@@ -8,9 +8,9 @@ function searchCondition() {
     fetch('travel_recommendation_api.json')
       .then(response => response.json())
       .then(data => {
-        const countrie = data.countries.find(item => ('countries' or 'countrie') === input);
+        const countrie = data.countries.find(item => ('countries' === input) || ('countrie' === input));
         const temples = data.temples.find(item => 'temples' === input);
-        const beaches = data.beaches.find(item => 'beaches' === input);
+        const beaches = data.beaches.find(item => ('beaches' === input) || ('beache' === input));
 
         if (countrie) {
             const cities = countrie.cities.join(', ');
