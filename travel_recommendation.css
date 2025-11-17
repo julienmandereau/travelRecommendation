@@ -51,7 +51,7 @@ nav {
 
 body {/* image de fond */
         background-image: url("decharge.jpg");
-        background-position: center center;
+        background-position: left center;
         background-repeat: no-repeat;
         background-size: contain;
 }
@@ -60,7 +60,7 @@ h2 {
     font-family: cursive, sans-serif;
     color: #7871b1;
     font-weight: bold;
-    font-size:8em;
+    font-size:4em;
     text-align: center center;
 }
 h3 {
@@ -68,7 +68,20 @@ h3 {
     font-family: cursive, sans-serif;
     color: #7871b1;
     font-weight: bold;
-    font-size:4em;
+    font-size:2em;
     text-align: center center;
+    margin-right: 700px;
 }
-     
+.searchCondition {
+      width: 600px;
+  height: 800px;
+  border: 1px solid black;
+  padding: 2px 4px;
+  overflow-y: scroll;
+  overflow-x: auto;
+  margin-top: 80px;
+  margin-right: 8px;
+  background-color: rgb(231, 230, 247);
+  text-align: right;
+  position: absolute; right: 0; top: 0;
+}

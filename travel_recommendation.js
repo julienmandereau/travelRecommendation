@@ -12,13 +12,13 @@ function searchCondition() {
 
         if (countrie) {
             const cities = countrie.cities.join(', ');
-            for (let j = 0; j < countries.length; j++) {
                 for (let i = 0; i < cities.length; i++) {
-                    resultDiv.innerHTML += `<p><strong>${data.countries[j].cities[i].name}</strong></p>`;
-                    resultDiv.innerHTML += `<img src="${data.countries[j].cities[i].imageUrl}" alt="hjh">`;
-                    resultDiv.innerHTML += `${data.countries[j].cities[i].description}</p>`;
-            }
-            } 
+                    resultDiv.innerHTML += `<p><strong>${data.countries[0].cities[i].name}</strong></p>`;
+                    resultDiv.innerHTML += `<img src="${data.countries[0].cities[i].imageUrl}" alt="hjh">`;
+                    resultDiv.innerHTML += `${data.countries[0].cities[i].description}</p>`;
+                }
+            
+        } 
             else {
           resultDiv.innerHTML = 'Condition not found.';
         }
