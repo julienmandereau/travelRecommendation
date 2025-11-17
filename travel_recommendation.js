@@ -12,10 +12,13 @@ function searchCondition() {
         const condition = data.conditions.find(item => item.name.toLowerCase() === input);
 
         if (condition) {
-          const countries = condition.countries.join(', ');
-          const temples = condition.temples.join(', ');
-          const beaches = condition.beaches.join(', ');
-
+            const countries = condition.countries.join(', ');
+            const temples = condition.temples.join(', ');
+            const beaches = condition.beaches.join(', ');
+            const countries = condition.countrie.join(', ');
+            const temples = condition.temple.join(', ');
+            const beaches = condition.beache.join(', ');
+    
           resultDiv.innerHTML += `<h2>${condition.name}</h2>`;
           resultDiv.innerHTML += `<img src="${condition.imagesrc}" alt="hjh">`;
 
