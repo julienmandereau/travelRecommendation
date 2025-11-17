@@ -53,7 +53,7 @@ body {/* image de fond */
         background-image: url("decharge.jpg");
         background-position: center center;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
 }
 h2 {
     text-decoration: none;

@@ -8,19 +8,12 @@ function searchCondition() {
     fetch('travel_recommendation_api.json')
       .then(response => response.json())
       .then(data => {
-        const condition = data.conditions.find(item => item.name.toLowerCase() === input);
+        const countrie = data.countries.find(item => item.name.toLowerCase() === input);
   
-        if (condition) {
-            const countries = condition.countries.join(', ');
-            const temples = condition.temples.join(', ');
-            const beaches = condition.beaches.join;
-    
-          resultDiv.innerHTML += `<h2>${condition.name}</h2>`;
-          resultDiv.innerHTML += `<img src="${condition.imagesrc}" alt="hjh">`;
-
-          resultDiv.innerHTML += `<p><strong>countries:</strong> ${countries}</p>`;
-          resultDiv.innerHTML += `<p><strong>temples:</strong> ${temples}</p>`;
-          resultDiv.innerHTML += `<p><strong>beaches:</strong> ${beaches}</p>`;
+        if (countrie) {
+        
+          resultDiv.innerHTML += `<h2>${countrie.name}</h2>`;
+          resultDiv.innerHTML += `<img src="${countrie.imageUrl}" alt="hjh">`;
         } else {
           resultDiv.innerHTML = 'Condition not found.';
         }
