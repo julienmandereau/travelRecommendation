@@ -56,11 +56,19 @@ body {/* image de fond */
         background-size: cover;
 }
 h2 {
-      text-decoration: none;
-      font-family: cursive, sans-serif;
-      color: #7871b1;
-      font-weight: bold;
-      font-size:8em;
-      text-align: center center;
+    text-decoration: none;
+    font-family: cursive, sans-serif;
+    color: #7871b1;
+    font-weight: bold;
+    font-size:8em;
+    text-align: center center;
 }
-         
+h3 {
+    text-decoration: none;
+    font-family: cursive, sans-serif;
+    color: #7871b1;
+    font-weight: bold;
+    font-size:4em;
+    text-align: center center;
+}
+     
