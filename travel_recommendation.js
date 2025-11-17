@@ -11,10 +11,13 @@ function searchCondition() {
         const countrie = data.countries.find(item => item.name.toLowerCase() === input);
   
         if (countrie) {
-        
-          resultDiv.innerHTML += `<h2>${countrie.name}</h2>`;
-          resultDiv.innerHTML += `<img src="${countrie.imageUrl}" alt="hjh">`;
-        } else {
+            const cities = countrie.cities.join(', ');
+            for (let i = 0; i < cities.length; i++) {
+            resultDiv.innerHTML += `${data.countries[0].cities[i].name}`;
+            resultDiv.innerHTML += `<img src="${data.countries[0].cities[i].imageUrl}" alt="hjh">`;
+            resultDiv.innerHTML += `${data.countries[0].cities[i].description}`;
+            }
+            } else {
           resultDiv.innerHTML = 'Condition not found.';
         }
       })
