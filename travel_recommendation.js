@@ -1,4 +1,5 @@
 const btnSearch = document.getElementById('btnSearch');
+const btnReset = document.getElementById('btnReset');
 
 function searchCondition() {
     const input = document.getElementById('conditionInput').value.toLowerCase();
@@ -9,7 +10,7 @@ function searchCondition() {
       .then(response => response.json())
       .then(data => {
         const countrie = data.countries.find(item => ('countries' === input) || ('countrie' === input));
-        const temples = data.temples.find(item => 'temples' === input);
+        const temples = data.temples.find(item => ('temples' === input) || ('temple' === input));
         const beaches = data.beaches.find(item => ('beaches' === input) || ('beache' === input));
 
         if (countrie) {
@@ -26,14 +27,14 @@ function searchCondition() {
                     resultDiv.innerHTML += `<p>${data.countries[2].cities[i].description}</p>`;
                 }
             }
-            if (temples) {
+        else if (temples) {
                 for (let i = 0; i < 2; i++) {
                     resultDiv.innerHTML += `<p><strong>${data.temples[i].name}</strong></p>`;
                     resultDiv.innerHTML += `<img src="${data.temples[i].imageUrl}" alt="hjh">`;
                     resultDiv.innerHTML += `<p>${data.temples[i].description}</p>`;
                 }
             } 
-            if (beaches) {
+        else if (beaches) {
                 for (let i = 0; i < 2; i++) {
                     resultDiv.innerHTML += `<p><strong>${data.beaches[i].name}</strong></p>`;
                     resultDiv.innerHTML += `<img src="${data.beaches[i].imageUrl}" alt="hjh">`;
@@ -46,4 +47,11 @@ function searchCondition() {
       })
       ;
   }
+  function reset() {
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = ''
+  }
+
     btnSearch.addEventListener('click', searchCondition);
+    btnReset.addEventListener('click', reset);
+    
